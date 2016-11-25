@@ -1,0 +1,9 @@
+<h2>New Dose</h2>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description, placeholder: 'Unidade' %>
+  <%= f.input :ingredient_id, collection: Ingredient.all %>
+  <%= f.submit "add a dose", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to 'Back', cocktails_path(@cocktail) %>
